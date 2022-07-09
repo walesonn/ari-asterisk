@@ -14,7 +14,7 @@ client.connect(url, username, password, function (err, ari) {
     console.log("we are into our app [info] [%s]" + event.channel.id);
 
     await channel.answer();
-    await channel.play({ media: "sound:tt-mokeys" }, ari.Playback());
+    await channel.play({ media: "sound:tt-monkeys" }, ari.Playback());
   });
 
   ari.on("StasisEnd", (event, channel) => {
