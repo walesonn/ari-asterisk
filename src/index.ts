@@ -1,7 +1,7 @@
 import "dotenv/config";
 import * as client from "ari-client";
 
-const url = process.env.ARI_HOST || "http://localhost:8088";
+const url = `${process.env.ARI_HOST}:${process.env.ARI_PORT}` || "http://localhost:8088";
 const username = process.env.ARI_USER || "some user";
 const password = process.env.ARI_PASS || "some pass";
 
