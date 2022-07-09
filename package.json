@@ -4,13 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc -b && cp .env ./dist/.env",
+    "start": "node dist"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "ari-client": "github:asterisk/node-ari-client",
     "asterisk-manager": "^0.2.0",
-    "dotenv": "^16.0.1"
+    "dotenv": "^16.0.1",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/ari-client": "^2.2.7",
+    "@types/node": "^18.0.3"
   }
 }
