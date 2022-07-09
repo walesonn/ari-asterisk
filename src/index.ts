@@ -14,8 +14,9 @@ client.connect(url, username, password, function (err, ari) {
     console.log("we are into our app [info] [%s]" + event.channel.id);
 
     await channel.answer();
+    const out = ari.Channel();
     // await channel.play({ media: "sound:tt-monkeys" }, ari.Playback());
-    await channel.originate({
+    await out.originate({
       endpoint: `PJSIP${event.args}`,
       extension: event.channel.dialplan.exten,
       context: "default",
